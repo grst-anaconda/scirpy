@@ -6,4 +6,4 @@
    tutorials
    api
    tcr-biology 
-   bibliography
+   zzz_bibliography

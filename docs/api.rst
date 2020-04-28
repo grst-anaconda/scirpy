@@ -1,5 +1,5 @@
-API
-===
+API - Foo
+=========
 
 
 .. module:: scirpy 

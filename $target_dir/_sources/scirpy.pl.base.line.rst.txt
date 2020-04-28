@@ -1,0 +1,6 @@
+scirpy.pl.base.line
+===================
+
+.. currentmodule:: scirpy.pl.base
+
+.. autofunction:: line

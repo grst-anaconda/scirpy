@@ -1,0 +1,6 @@
+scirpy.tl.alpha\_diversity
+==========================
+
+.. currentmodule:: scirpy.tl
+
+.. autofunction:: alpha_diversity

@@ -1,0 +1,6 @@
+scirpy.read\_10x\_vdj
+=====================
+
+.. currentmodule:: scirpy
+
+.. autofunction:: read_10x_vdj

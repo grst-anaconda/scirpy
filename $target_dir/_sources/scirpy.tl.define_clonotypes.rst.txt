@@ -1,0 +1,6 @@
+scirpy.tl.define\_clonotypes
+============================
+
+.. currentmodule:: scirpy.tl
+
+.. autofunction:: define_clonotypes

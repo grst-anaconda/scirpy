@@ -1,0 +1,6 @@
+scirpy.pl.group\_abundance
+==========================
+
+.. currentmodule:: scirpy.pl
+
+.. autofunction:: group_abundance

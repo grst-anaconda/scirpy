@@ -1,0 +1,445 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API &mdash; scirpy  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/typehints.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="scirpy.read_h5ad" href="scirpy.read_h5ad.html" />
+    <link rel="prev" title="Analysis of 3k T cells from cancer" href="tutorials/tutorial_3k_tcr.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> scirpy
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0+49bab20
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#input-output">Input/Output</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.read_h5ad.html">scirpy.read_h5ad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.read_10x_vdj.html">scirpy.read_10x_vdj</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.read_tracer.html">scirpy.read_tracer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-scirpy.datasets">Datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.datasets.wu2020.html">scirpy.datasets.wu2020</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.datasets.wu2020_3k.html">scirpy.datasets.wu2020_3k</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-scirpy.pp">Preprocessing: <code class="docutils literal notranslate"><span class="pre">pp</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pp.merge_with_tcr.html">scirpy.pp.merge_with_tcr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pp.tcr_dist.html">scirpy.pp.tcr_dist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pp.tcr_neighbors.html">scirpy.pp.tcr_neighbors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-scirpy.tl">Tools: <code class="docutils literal notranslate"><span class="pre">tl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.define_clonotypes.html">scirpy.tl.define_clonotypes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.clonotype_network.html">scirpy.tl.clonotype_network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.chain_pairing.html">scirpy.tl.chain_pairing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.clonal_expansion.html">scirpy.tl.clonal_expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.summarize_clonal_expansion.html">scirpy.tl.summarize_clonal_expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.alpha_diversity.html">scirpy.tl.alpha_diversity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.group_abundance.html">scirpy.tl.group_abundance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.spectratype.html">scirpy.tl.spectratype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.repertoire_overlap.html">scirpy.tl.repertoire_overlap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.tl.clonotype_imbalance.html">scirpy.tl.clonotype_imbalance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-scirpy.pl">Plotting: <code class="docutils literal notranslate"><span class="pre">pl</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.alpha_diversity.html">scirpy.pl.alpha_diversity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.clonal_expansion.html">scirpy.pl.clonal_expansion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.group_abundance.html">scirpy.pl.group_abundance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.spectratype.html">scirpy.pl.spectratype</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.vdj_usage.html">scirpy.pl.vdj_usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.repertoire_overlap.html">scirpy.pl.repertoire_overlap</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.clonotype_imbalance.html">scirpy.pl.clonotype_imbalance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scirpy.pl.clonotype_network.html">scirpy.pl.clonotype_network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-scirpy.pl.base">Base plotting functions: <code class="docutils literal notranslate"><span class="pre">pl.base</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="scirpy.pl.base.bar.html">scirpy.pl.base.bar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scirpy.pl.base.line.html">scirpy.pl.base.line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scirpy.pl.base.barh.html">scirpy.pl.base.barh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scirpy.pl.base.curve.html">scirpy.pl.base.curve</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tcr-biology.html">T-cell receptor model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">scirpy</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/grst/scirpy/blob/master/docs/api.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-scirpy">
+<span id="api"></span><h1>API<a class="headerlink" href="#module-scirpy" title="Permalink to this headline">¶</a></h1>
+<p>Python library for single-cell TCR analysis</p>
+<div class="section" id="input-output">
+<span id="api-io"></span><h2>Input/Output<a class="headerlink" href="#input-output" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.read_h5ad.html#scirpy.read_h5ad" title="scirpy.read_h5ad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_h5ad</span></code></a>(filename[, backed, as_sparse, …])</p></td>
+<td><p>Read <code class="docutils literal notranslate"><span class="pre">.h5ad</span></code>-formatted hdf5 file.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.read_10x_vdj.html#scirpy.read_10x_vdj" title="scirpy.read_10x_vdj"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_10x_vdj</span></code></a>(path[, filtered])</p></td>
+<td><p>Read TCR data from 10x Genomics cell-ranger output.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.read_tracer.html#scirpy.read_tracer" title="scirpy.read_tracer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_tracer</span></code></a>(path)</p></td>
+<td><p>Read data from TraCeR.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-scirpy.datasets">
+<span id="datasets"></span><h2>Datasets<a class="headerlink" href="#module-scirpy.datasets" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.datasets.wu2020.html#scirpy.datasets.wu2020" title="scirpy.datasets.wu2020"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wu2020</span></code></a>()</p></td>
+<td><p>Return the dataset from <a class="reference internal" href="bibliography.html#wu2020" id="id1"><span>[Wu2020]</span></a> as AnnData object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.datasets.wu2020_3k.html#scirpy.datasets.wu2020_3k" title="scirpy.datasets.wu2020_3k"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wu2020_3k</span></code></a>()</p></td>
+<td><p>Return the dataset from <a class="bibtex reference internal" href="bibliography.html#wu2020" id="id2">[WMdA+20]</a> as AnnData object, downsampled to 3000 TCR-containing cells.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-scirpy.pp">
+<span id="preprocessing-pp"></span><h2>Preprocessing: <code class="docutils literal notranslate"><span class="pre">pp</span></code><a class="headerlink" href="#module-scirpy.pp" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pp.merge_with_tcr.html#scirpy.pp.merge_with_tcr" title="scirpy.pp.merge_with_tcr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_with_tcr</span></code></a>(adata, adata_tcr, *[, how, …])</p></td>
+<td><p>Integrate the TCR AnnData into an existing AnnData object with transcriptomics data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.pp.tcr_dist.html#scirpy.pp.tcr_dist" title="scirpy.pp.tcr_dist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tcr_dist</span></code></a>(unique_seqs, *[, metric, cutoff, …])</p></td>
+<td><p>calculate the sequence x sequence distance matrix</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pp.tcr_neighbors.html#scirpy.pp.tcr_neighbors" title="scirpy.pp.tcr_neighbors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tcr_neighbors</span></code></a>(adata, *[, metric, cutoff, …])</p></td>
+<td><p>Construct a cell x cell neighborhood graph based on CDR3 sequence similarity.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-scirpy.tl">
+<span id="tools-tl"></span><h2>Tools: <code class="docutils literal notranslate"><span class="pre">tl</span></code><a class="headerlink" href="#module-scirpy.tl" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.tl.define_clonotypes.html#scirpy.tl.define_clonotypes" title="scirpy.tl.define_clonotypes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">define_clonotypes</span></code></a>(adata, *[, partitions, …])</p></td>
+<td><p>Define clonotypes based on cdr3 distance.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.tl.clonotype_network.html#scirpy.tl.clonotype_network" title="scirpy.tl.clonotype_network"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clonotype_network</span></code></a>(adata, *[, min_size, …])</p></td>
+<td><p>Build the clonotype network for plotting</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.tl.chain_pairing.html#scirpy.tl.chain_pairing" title="scirpy.tl.chain_pairing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chain_pairing</span></code></a>(adata, *[, inplace, key_added])</p></td>
+<td><p>Associate categories to cells based on how many TRA and TRB chains they have.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.tl.clonal_expansion.html#scirpy.tl.clonal_expansion" title="scirpy.tl.clonal_expansion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clonal_expansion</span></code></a>(adata, *[, target_col, …])</p></td>
+<td><p>Adds a column to obs which clonotypes are expanded.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.tl.summarize_clonal_expansion.html#scirpy.tl.summarize_clonal_expansion" title="scirpy.tl.summarize_clonal_expansion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">summarize_clonal_expansion</span></code></a>(adata, groupby, *)</p></td>
+<td><p>Summarizes clonal expansion by a grouping variable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.tl.alpha_diversity.html#scirpy.tl.alpha_diversity" title="scirpy.tl.alpha_diversity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">alpha_diversity</span></code></a>(adata, groupby, *[, …])</p></td>
+<td><p>Computes the alpha diversity of clonotypes within a group.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.tl.group_abundance.html#scirpy.tl.group_abundance" title="scirpy.tl.group_abundance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">group_abundance</span></code></a>(adata, groupby[, …])</p></td>
+<td><p>Creates summary statsitics on how many cells belong to a certain category within a certain group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.tl.spectratype.html#scirpy.tl.spectratype" title="scirpy.tl.spectratype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spectratype</span></code></a>(adata[, groupby, combine_fun, …])</p></td>
+<td><p>Show the distribution of CDR3 region lengths.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.tl.repertoire_overlap.html#scirpy.tl.repertoire_overlap" title="scirpy.tl.repertoire_overlap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repertoire_overlap</span></code></a>(adata, groupby, *[, …])</p></td>
+<td><p>Compute distance between cell groups based on clonotype overlap.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.tl.clonotype_imbalance.html#scirpy.tl.clonotype_imbalance" title="scirpy.tl.clonotype_imbalance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clonotype_imbalance</span></code></a>(adata, replicate_col, …)</p></td>
+<td><p>Aims to find clonotypes that are the most enriched or depleted in a category.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-scirpy.pl">
+<span id="plotting-pl"></span><h2>Plotting: <code class="docutils literal notranslate"><span class="pre">pl</span></code><a class="headerlink" href="#module-scirpy.pl" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pl.alpha_diversity.html#scirpy.pl.alpha_diversity" title="scirpy.pl.alpha_diversity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">alpha_diversity</span></code></a>(adata, groupby, *[, …])</p></td>
+<td><p>Plot the alpha diversity per group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.pl.clonal_expansion.html#scirpy.pl.clonal_expansion" title="scirpy.pl.clonal_expansion"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clonal_expansion</span></code></a>(adata, groupby, *[, …])</p></td>
+<td><p>Plots the the <em>number of cells</em> in <code class="docutils literal notranslate"><span class="pre">target_col</span></code> that fall into a certain count bin for each group in <code class="docutils literal notranslate"><span class="pre">group_by</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pl.group_abundance.html#scirpy.pl.group_abundance" title="scirpy.pl.group_abundance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">group_abundance</span></code></a>(adata, groupby[, …])</p></td>
+<td><p>Plots how many cells belong to each clonotype.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.pl.spectratype.html#scirpy.pl.spectratype" title="scirpy.pl.spectratype"><code class="xref py py-obj docutils literal notranslate"><span class="pre">spectratype</span></code></a>(adata[, groupby, combine_fun, …])</p></td>
+<td><p>Show the distribution of CDR3 region lengths.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pl.vdj_usage.html#scirpy.pl.vdj_usage" title="scirpy.pl.vdj_usage"><code class="xref py py-obj docutils literal notranslate"><span class="pre">vdj_usage</span></code></a>(adata, *[, target_cols, fraction, …])</p></td>
+<td><p>Creates a ribbon plot of the most abundant VDJ combinations in a given subset of cells.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.pl.repertoire_overlap.html#scirpy.pl.repertoire_overlap" title="scirpy.pl.repertoire_overlap"><code class="xref py py-obj docutils literal notranslate"><span class="pre">repertoire_overlap</span></code></a>(adata, groupby, *[, …])</p></td>
+<td><p>Visualizes overlap betwen a pair of samples on a scatter plot or all samples on a heatmap or draws a dendrogram of samples only.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pl.clonotype_imbalance.html#scirpy.pl.clonotype_imbalance" title="scirpy.pl.clonotype_imbalance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clonotype_imbalance</span></code></a>(adata, replicate_col, …)</p></td>
+<td><p>Aims to find clonotypes that are the most enriched or depleted in a category.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.pl.clonotype_network.html#scirpy.pl.clonotype_network" title="scirpy.pl.clonotype_network"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clonotype_network</span></code></a>(adata, *[, color, …])</p></td>
+<td><p>Plot the clonotype network</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="module-scirpy.pl.base">
+<span id="base-plotting-functions-pl-base"></span><h3>Base plotting functions: <code class="docutils literal notranslate"><span class="pre">pl.base</span></code><a class="headerlink" href="#module-scirpy.pl.base" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pl.base.bar.html#scirpy.pl.base.bar" title="scirpy.pl.base.bar"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bar</span></code></a>(data, *[, ax, stacked, style, …])</p></td>
+<td><p>Basic plotting function built on top of bar plot in Pandas.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.pl.base.line.html#scirpy.pl.base.line" title="scirpy.pl.base.line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">line</span></code></a>(data, *[, ax, style, style_kws, fig_kws])</p></td>
+<td><p>Basic plotting function built on top of line plot in Pandas.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="scirpy.pl.base.barh.html#scirpy.pl.base.barh" title="scirpy.pl.base.barh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">barh</span></code></a>(data, *[, ax, style, style_kws, fig_kws])</p></td>
+<td><p>Basic plotting function built on top of bar plot in Pandas.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="scirpy.pl.base.curve.html#scirpy.pl.base.curve" title="scirpy.pl.base.curve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">curve</span></code></a>(data, *[, ax, curve_layout, shade, …])</p></td>
+<td><p>Basic plotting function primarily for the spectratype to show length distributions</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="scirpy.read_h5ad.html" class="btn btn-neutral float-right" title="scirpy.read_h5ad" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tutorials/tutorial_3k_tcr.html" class="btn btn-neutral float-left" title="Analysis of 3k T cells from cancer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Gregor Sturm, Tamas Szabo.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

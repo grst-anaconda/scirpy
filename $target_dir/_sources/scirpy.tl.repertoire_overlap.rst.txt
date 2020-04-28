@@ -1,0 +1,6 @@
+scirpy.tl.repertoire\_overlap
+=============================
+
+.. currentmodule:: scirpy.tl
+
+.. autofunction:: repertoire_overlap

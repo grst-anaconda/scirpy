@@ -1,0 +1,6 @@
+scirpy.tl.clonotype\_imbalance
+==============================
+
+.. currentmodule:: scirpy.tl
+
+.. autofunction:: clonotype_imbalance

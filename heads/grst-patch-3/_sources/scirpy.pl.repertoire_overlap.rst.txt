@@ -1,0 +1,6 @@
+scirpy.pl.repertoire\_overlap
+=============================
+
+.. currentmodule:: scirpy.pl
+
+.. autofunction:: repertoire_overlap

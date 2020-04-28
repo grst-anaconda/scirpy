@@ -1,0 +1,6 @@
+scirpy.pl.vdj\_usage
+====================
+
+.. currentmodule:: scirpy.pl
+
+.. autofunction:: vdj_usage

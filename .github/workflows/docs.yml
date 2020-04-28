@@ -23,10 +23,15 @@ jobs:
       - name: Get target folder for page deploy from github ref
         run: |
           # get rid of "refs/"
-          tmp_target_dir="${github_ref/refs\//}"
+          tmp_target_dir=$(echo $github_ref | sed "s/^refs\///")
           echo $tmp_target_dir
+          # get rid of "merge" at the end of ref for PRs
+          if [[ $tmp_target_dir = pull/* ]]
+          then
+            tmp_target_dir=$(echo $tmp_target_dir | sed "s/\/merge$//")
+          fi
           # when on master, we want to deploy to the root dir (-> ".")
-          target_dir="${tmp_target_dir/heads\/master/./}"
+          target_dir=$(echo $tmp_target_dir | sed "s/heads\/master/./")
           echo $target_dir
           echo "::set-env name=target_dir::$target_dir"
         env:

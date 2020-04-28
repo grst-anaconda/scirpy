@@ -1,6 +1,0 @@
-scirpy.pl.base.bar
-==================
-
-.. currentmodule:: scirpy.pl.base
-
-.. autofunction:: bar

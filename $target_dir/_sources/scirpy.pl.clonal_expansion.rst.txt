@@ -1,6 +1,0 @@
-scirpy.pl.clonal\_expansion
-===========================
-
-.. currentmodule:: scirpy.pl
-
-.. autofunction:: clonal_expansion

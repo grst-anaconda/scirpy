@@ -1,6 +1,0 @@
-scirpy.tl.summarize\_clonal\_expansion
-======================================
-
-.. currentmodule:: scirpy.tl
-
-.. autofunction:: summarize_clonal_expansion

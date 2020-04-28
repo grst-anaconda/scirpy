@@ -1,6 +1,0 @@
-scirpy.read\_tracer
-===================
-
-.. currentmodule:: scirpy
-
-.. autofunction:: read_tracer

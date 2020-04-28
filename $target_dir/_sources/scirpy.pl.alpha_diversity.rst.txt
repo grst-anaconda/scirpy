@@ -1,6 +1,0 @@
-scirpy.pl.alpha\_diversity
-==========================
-
-.. currentmodule:: scirpy.pl
-
-.. autofunction:: alpha_diversity

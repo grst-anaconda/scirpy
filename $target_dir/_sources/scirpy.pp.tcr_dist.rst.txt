@@ -1,6 +1,0 @@
-scirpy.pp.tcr\_dist
-===================
-
-.. currentmodule:: scirpy.pp
-
-.. autofunction:: tcr_dist

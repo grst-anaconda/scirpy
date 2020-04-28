@@ -1,6 +1,0 @@
-scirpy.tl.clonotype\_network
-============================
-
-.. currentmodule:: scirpy.tl
-
-.. autofunction:: clonotype_network

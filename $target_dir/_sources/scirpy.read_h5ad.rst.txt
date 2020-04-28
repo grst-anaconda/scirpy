@@ -1,6 +1,0 @@
-scirpy.read\_h5ad
-=================
-
-.. currentmodule:: scirpy
-
-.. autofunction:: read_h5ad

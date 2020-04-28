@@ -1,6 +1,0 @@
-scirpy.pl.base.barh
-===================
-
-.. currentmodule:: scirpy.pl.base
-
-.. autofunction:: barh

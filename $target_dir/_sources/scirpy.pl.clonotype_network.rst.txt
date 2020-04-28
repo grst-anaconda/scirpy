@@ -1,6 +1,0 @@
-scirpy.pl.clonotype\_network
-============================
-
-.. currentmodule:: scirpy.pl
-
-.. autofunction:: clonotype_network

@@ -1,6 +1,0 @@
-scirpy.tl.spectratype
-=====================
-
-.. currentmodule:: scirpy.tl
-
-.. autofunction:: spectratype

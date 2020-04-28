@@ -55,3 +55,4 @@ jobs:
           FOLDER: docs/_build/html # The folder the action should deploy.
           TARGET_FOLDER: ${{ env.target_dir }}
           CLEAN: true
+          CLEAN_EXCLUDE: '["heads", "pull", "tags"]'

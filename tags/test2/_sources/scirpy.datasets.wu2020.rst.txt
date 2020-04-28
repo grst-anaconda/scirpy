@@ -1,0 +1,6 @@
+scirpy.datasets.wu2020
+======================
+
+.. currentmodule:: scirpy.datasets
+
+.. autofunction:: wu2020

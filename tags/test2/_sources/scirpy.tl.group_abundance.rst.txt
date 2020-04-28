@@ -1,0 +1,6 @@
+scirpy.tl.group\_abundance
+==========================
+
+.. currentmodule:: scirpy.tl
+
+.. autofunction:: group_abundance

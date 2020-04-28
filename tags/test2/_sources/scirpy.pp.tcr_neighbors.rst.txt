@@ -1,0 +1,6 @@
+scirpy.pp.tcr\_neighbors
+========================
+
+.. currentmodule:: scirpy.pp
+
+.. autofunction:: tcr_neighbors

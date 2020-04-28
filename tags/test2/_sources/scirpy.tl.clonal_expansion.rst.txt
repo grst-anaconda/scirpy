@@ -1,0 +1,6 @@
+scirpy.tl.clonal\_expansion
+===========================
+
+.. currentmodule:: scirpy.tl
+
+.. autofunction:: clonal_expansion

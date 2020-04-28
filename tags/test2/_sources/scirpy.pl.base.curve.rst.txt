@@ -1,0 +1,6 @@
+scirpy.pl.base.curve
+====================
+
+.. currentmodule:: scirpy.pl.base
+
+.. autofunction:: curve

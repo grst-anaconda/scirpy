@@ -1,0 +1,6 @@
+scirpy.tl.chain\_pairing
+========================
+
+.. currentmodule:: scirpy.tl
+
+.. autofunction:: chain_pairing

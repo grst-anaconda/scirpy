@@ -1,0 +1,6 @@
+scirpy.pp.merge\_with\_tcr
+==========================
+
+.. currentmodule:: scirpy.pp
+
+.. autofunction:: merge_with_tcr

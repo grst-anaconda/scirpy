@@ -20,6 +20,17 @@ jobs:
           key: ${{ runner.os }}-pip-${{ hashFiles('pyproject.toml') }}
           restore-keys: |
             ${{ runner.os }}-pip-
+      - name: Get target folder for page deploy from github ref
+        run: |
+          # get rid of "refs/"
+          tmp_target_dir="${github_ref/refs\//}"
+          echo $tmp_target_dir
+          # when on master, we want to deploy to the root dir (-> empty string)
+          target_dir="${tmp_target_dir/heads\/master/}"
+          echo $target_dir
+          echo "::set-env name=target_dir::$target_dir"
+        env:
+          github_ref: ${{ github.ref }}
       - uses: actions/setup-python@v1
         with:
           python-version: "3.7"
@@ -30,18 +41,7 @@ jobs:
           FLIT_ROOT_INSTALL=1 flit install --deps develop
       - name: run sphinx
         run: |
-          cd docs && make html
-      - name: Get target folder from github ref
-        run: |
-          # get rid of "refs/"
-          tmp_target_dir="${github_ref/refs\//}"
-          echo $tmp_target_dir
-          # when on master, we want to deploy to the root dir (-> empty string)
-          target_dir="${tmp_target_dir/heads\/master/}
-          echo $target_dir
-          echo "::set-env name=target_dir::$target_dir"
-        env:
-          github_ref: ${{ github.ref }}
+          cd docs && make html   
       - name: Deploy to gh-pages
         if: github.ref == 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@releases/v3
